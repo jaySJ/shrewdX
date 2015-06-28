@@ -1,0 +1,159 @@
+<!doctype html>
+<html ng-app="ShrewdApp">
+    <head>
+        <title>GALILEO | Organizational Network Analysis</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=10" />
+        <!-- ——————————————————————————————————————————————————————————————————— CSS -->
+  		<link rel="stylesheet" type="text/css" media="all" href="/css/jquery.qtip.css" />
+  		<link rel="stylesheet" type="text/css" media="all" href="/css/styles.css" />
+        <link rel="stylesheet" href="/css/normalize.css"/>
+        <link rel="stylesheet" href="/css/main.css"/> 
+        <link rel="stylesheet" href="/css/modal-instance.css"/> 
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css"/>		
+   		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/3.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+                
+		<!--script src="http://maps.google.com/maps/api/js?sensor=false"></script-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"/>
+		
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script-->
+                
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.min.js"></script>
+        <script type ="text/javascript" src="/scripts/vendor/modernizr-2.7.1.min.js"></script>
+       	<script type ="text/javascript" src="/scripts/vendor/vis.js"></script>
+		<script type ="text/javascript" src="/scripts/vendor/graph.js"></script>
+		<link href="http://visjs.org/dist/vis.css" rel="stylesheet" type="text/css" />
+		<!--script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script-->
+
+		<!--link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"/-->
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.7.0.js"></script>
+
+        
+		<script type ="text/javascript" src="/scripts/appModule.js"></script>
+   		<script type ="text/javascript" src="/scripts/vendor/main.js"> </script>
+		<script type ="text/javascript" src="/scripts/directives.js"></script>
+		<script type ="text/javascript" src="/scripts/controllers.js"></script>
+        <script type ="text/javascript" src="/scripts/modalDlgController.js"></script>
+        <!--script type ="text/javascript" src="/scripts/myModalContent.js"></script-->
+        <script type ="text/javascript" src="/scripts/profileController.js"></script>
+        <script type ="text/javascript" src="/scripts/usersController.js"></script>
+        <script type ="text/javascript" src="/scripts/orgController.js"></script>
+        <script type ="text/javascript" src="/scripts/surveyController.js"></script>
+	<style>
+			body { background: rgba(227, 235, 200, 0.58); background-repeat:no-repeat; background-position:center top; opacity:0.95;}
+	</style>
+	</head>
+    <body ng-controller="usersController">		
+			<div class="top_block block_HeaderPane" style="position: fixed;" ng-controller="profileController">
+				<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2a2a2a; z-index: 99999999; overflow: visible;" >
+					<div class="navbar-header">	<a class="navbar-brand" style="color:#ffcb05"  >Shrewd Galileo <i style="color:green" class="fa fa-bullhorn"></i> <sup>Beta <i>v0.1</i></sup></a>
+						<ul class="nav navbar-nav navbar-right">
+							<ul class="nav nav-pills">
+								<li class="active"><a href="/">Home</a></li>								
+								<li class="dropdown">
+									<a href="#" data-toggle="dropdown" class="dropdown-toggle">{{myProfile.user.local.firstname}} <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Settings</a></li>										
+										<li><a href="/Galileo/manage/profile">Profile</a></li>
+										<li><a href="/Galileo/manage/pwd">Change Password</a></li>
+										<li class="divider"></li>
+										<li><a ng-href="/logout" class="btn btn-default btn-small" ><i style="color:#ffcb05" class="fa fa-sign-out">Sign Out</i></a>
+										</li>										
+									</ul>
+								</li>
+							</ul>
+						</ul>						
+					</div>
+				</nav>
+			</div>
+			<!--div class="content">
+				<div class="background block_LeftPaneContent" >	
+				</div>
+			</div-->
+			<div ng-controller="profileController">
+				<div class="left_block block_LeftPaneContent">
+					<!--nav-->
+					<ul class="accordion"> 
+						<li id="one" class="files"><a href="/Galileo/manage/profile"><span></span>My profile</a></li> 
+						<li id="two" class="mail" ng-if="IsAdmin()" ><a href="/Galileo/manage/org/update">Sample Size<span></span></a></li>
+						<li id="three" class="cloud" ng-if="IsAdmin()" ><a href="/Galileo/manage/dept/update">Departments<span></span></a></li>
+						<li id="four" class="sign" ng-if="IsAdmin()" ><a href="/Galileo/manage/org/networx">Networx</a></li>
+						<li id="five" class="survey" > <a href="/Galileo/survey1">Surveys </a></li>
+								<ul class="sub-menu">
+									<li><a href="/Galileo/survey1"><em>01</em> Quarter 1 <span>2014</span></a></li>
+									<li><a href="/Galileo/survey2"><em>02</em> Quarter 2 <span>2014</span></a></li>
+									<li><a href="/Galileo/survey3"><em>03</em> Quarter 3 <span>2014 </span></a></li>
+								</ul>
+					 </ul>
+				</div>
+				<div class="center_block block_MainPane" >
+					<div class="content" >
+						<div ng-view > </div>
+					</div>					
+				</div>	<!-- END center_block block_MainPane -->
+			</div> <!-- END content-->
+	        <!-- Button trigger modal -->
+            <!--button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="myModal">
+              Launch demo modal
+            </button-->
+
+            <!-- Modal -->            
+			<!--script type="text/ng-template" id="myModalContent">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Add Members</h3>
+						</div>
+						<div class="modal-body">
+						  <form >
+							<div class="alert alert-danger">{{message}}</div>					
+							<div>
+								<select class="form-control btn btn-primary dropdown-toggle" ng-model="formdata_.selectedRole" >
+									<option ng-repeat="choice in allowedRoles">{{choice}}</option>
+								</select>
+							</div><br>
+							<div class="input-group margin-bottom-sm">
+								<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+								<input class="form-control" type="text" name="email" ng-model="formData.email" placeholder="Email address"/>
+							</div><br>
+							<div class="input-group" ng-show="formdata_.showDepartment">
+								<span class="input-group-addon">
+									<i class="fa fa-rocket fa-fw"></i>
+								</span>
+								<input class="form-control" type="text" name="department" ng-model="formData.department" placeholder="Department name"/>
+							</div><br>
+							<div class="input-group" ng-show="formdata_.showDepartment">
+								<span class="input-group-addon">
+									<i class="fa fa-rocket fa-fw"></i>
+								</span>
+								<input class="form-control" type="text" name="location" ng-model="formData.location" placeholder="Location"/>
+							</div><br>
+						  </form>
+						</div>
+						<br>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-warning" ng-click="createMember()">Add Member</button>
+										<!--button class="btn btn-primary" ng-click="submit()">OK</button->
+							<button type="submit" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+						</div>
+					</div>
+				</div>
+				</script-->
+    </body>		
+</html>
+	
