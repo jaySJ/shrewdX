@@ -1,0 +1,46 @@
+<!-- views/profile.htm -->
+	<div ng-controller="profileController">
+		<div class="btn-group">
+				<button type="button" class="btn btn-default " ng-click="open()" ><a style="cursor: pointer" ><i class="fa fa-plus-circle fa-2x"></i></a></button>
+				<button type="button" class="btn btn-default" ng-click = "deleteSelectedMember()" ><a  style="cursor: pointer"><i class="fa fa-minus-circle fa-2x"></i></a></button>
+				<button type="button" ng-click = "drawUsersGraph()" class="btn btn-default"><a style="cursor: pointer" ><i class="fa fa-refresh fa-2x"></i></a></button>					
+				<button type="button" class="btn btn-default" ng-click = "getSelectedNodeEmail()"><a style="cursor: pointer" ><i class="fa fa-cloud-download fa-2x"></i></a></button>
+		</div>
+		<div class="mygraphContainer">
+			<div class="mygraph" id="mygraph">
+				<!-- LOCAL INFORMATION -->
+				<div class="col">
+					<div class="well" >
+						<table class="table" >
+							<thead>
+								<tr>
+									<th>Email</th>
+									<th>First Name</th>
+									<th>User Role</th>
+									<th>Alias</th>
+									<th>Date Enrolled</th>
+									<th>Actions</th>
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="member in members">
+									<td>{{member.local.email}}</td>
+									<td>{{member.local.lastname + ", "+ member.local.firstname}}</td>
+									<td>{{member.local.group}}</td>
+									<td>{{member.local.alias}}</td>
+									<td>{{member.local.dateEnrolled}}</td>
+									<td><a ng-click="drawUsersGraph()" class="btn btn-small btn-primary">view graph</a></td>
+									<td><a ng-click="deleteMember(member._id)" class="btn btn-small btn-danger">delete</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+
+	

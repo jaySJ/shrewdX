@@ -1,0 +1,23 @@
+<!-- views/profile.htm -->
+<div class="container">
+	<div class="page-header text-center">
+		<h1><span class="fa fa-anchor"></span> Profile Page</h1>
+		<!--a href="/logout" class="btn btn-default btn-sm">Logout</a-->
+	</div>
+	<div class="row">
+		<!-- LOCAL INFORMATION -->
+		<div class="col-sm-6">
+			<div class="well">
+				<h3><span class="fa fa-user"></span> Local</h3>
+					<p>
+						<strong>id</strong>: <%= currUser._id %><br>
+						<strong>email</strong>: <%= currUser.local.email %><br>
+						<strong>email</strong>: <%= currUser.local.firstname %><br>
+						<strong>password</strong>: <%= currUser.local.password %><br>
+						<strong>alias</strong>: <%= currUser.local.alias %><br>
+						<strong>group</strong>: <%= currUser.local.group %>
+					</p>
+			</div>
+		</div>
+	</div>
+</div>

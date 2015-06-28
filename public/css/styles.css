@@ -1,0 +1,1251 @@
+/*  
+Theme Name: Datavisualization.ch Selection
+Theme URI: http://selection.datavisualization.ch/
+Description: Design for the Selection of Recommendet Tools of Datavisualization.ch
+Version: 1.2
+Author: Interactive Things
+Author URI: http://interactivethings.com/
+Updated: 131226_BW
+*/
+/*
+BASE STYLESHEET
+Description:  Global variables for the website
+Author:       Interactive Things
+Created:      110504_BW
+Updated:      110504_BW
+*/
+/* line 17, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/**
+ * Grid - The grid is based on the OOCSS grid (http://oocss.org) by Nicole Sullivan.
+ * It provides several grid classes that can be mixed and matched and if necessary
+ * can be wrapped in a row class to prevent columns from bumping into each other.
+ *
+ * .col1of1  - Full width
+ * .col1of2  - Half width
+ * .col1of3  - Third width
+ * .col2of3  - Two thirds width
+ * .col1of4  - Fourth width
+ * .col3of4  - Three fourths width
+ * .col1of5  - Fifth width
+ * .col2of5  - Two fifths width
+ * .col3of5  - Three fifths width
+ * .col4of5  - Four fifths width
+ *
+ */
+/* line 1, library/_mixins.scss */
+.navigation ul {
+  margin: 0;
+  padding: 0; }
+  /* line 4, library/_mixins.scss */
+  .navigation ul li {
+    display: block;
+    height: 30px;
+    line-height: 32px;
+    list-style: none;
+    color: white;
+    text-transform: uppercase; }
+    /* line 11, library/_mixins.scss */
+    .navigation ul li a {
+      color: white;
+      display: block;
+      font-weight: normal;
+      height: 30px;
+      line-height: 32px; }
+
+/* line 17, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 20, library/_grid.scss */
+.row {
+  *zoom: 1;
+  clear: both; }
+  /* line 38, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 29, library/_grid.scss */
+.col1of2,
+.col1of3, .col2of3,
+.col1of4, .col2of4, .col3of4,
+.col1of5, .col2of5, .col3of5, .col4of5,
+.col1of6, .col2of6, .col3of6, .col4of6, .col5of6 {
+  float: left; }
+
+/* line 33, library/_grid.scss */
+.col1of1 {
+  float: none;
+  width: 100%; }
+
+/* line 38, library/_grid.scss */
+.col1of2 {
+  width: 50%; }
+
+/* line 42, library/_grid.scss */
+.col1of3 {
+  width: 33.333%; }
+
+/* line 46, library/_grid.scss */
+.col2of3 {
+  width: 66.667%; }
+
+/* line 50, library/_grid.scss */
+.col1of4 {
+  width: 25%; }
+
+/* line 54, library/_grid.scss */
+.col2of4 {
+  width: 50%; }
+
+/* line 58, library/_grid.scss */
+.col3of4 {
+  width: 75%; }
+
+/* line 62, library/_grid.scss */
+.col1of5 {
+  width: 20%; }
+
+/* line 66, library/_grid.scss */
+.col2of5 {
+  width: 40%; }
+
+/* line 70, library/_grid.scss */
+.col3of5 {
+  width: 60%; }
+
+/* line 74, library/_grid.scss */
+.col4of5 {
+  width: 80%; }
+
+/* line 78, library/_grid.scss */
+.col1of6 {
+  width: 16.667%; }
+
+/* line 82, library/_grid.scss */
+.col2of6 {
+  width: 33.333%; }
+
+/* line 86, library/_grid.scss */
+.col3of6 {
+  width: 50%; }
+
+/* line 90, library/_grid.scss */
+.col4of6 {
+  width: 66.667%; }
+
+/* line 94, library/_grid.scss */
+.col5of6 {
+  width: 83.333%; }
+
+@media all and (max-width: 499px) {
+  /* line 99, library/_grid.scss */
+  .col1of2, .col1of3, .col1of4, .col1of5, .col1of6 {
+    float: none;
+    width: auto; } }
+/**
+ * Clearfix
+ *
+ * Styleguide 1.0.1
+ */
+/* line 110, library/_grid.scss */
+.clearfix {
+  *zoom: 1; }
+  /* line 38, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 3, base/_typography.scss */
+html, body {
+  color: #333333; }
+
+/* line 6, base/_typography.scss */
+body {
+  font: 75% "Helvetica", Helvetica, Arial, sans-serif;
+  line-height: 1.5; }
+
+/* line 13, base/_typography.scss */
+h1 {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: bold; }
+
+/* line 18, base/_typography.scss */
+h2 {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold; }
+
+/* line 23, base/_typography.scss */
+h2 a:hover {
+  color: #333333; }
+
+/* line 26, base/_typography.scss */
+h3 {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: bold; }
+
+/* line 31, base/_typography.scss */
+h4 {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: bold; }
+
+/* line 38, base/_typography.scss */
+a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold; }
+
+/* line 43, base/_typography.scss */
+a:focus, a:active, a:hover {
+  color: #ee0011;
+  border: none;
+  outline: none; }
+
+/* line 48, base/_typography.scss */
+p {
+  margin: 0 0 1.5em; }
+
+/* line 51, base/_typography.scss */
+form p {
+  margin: 0; }
+
+/* line 54, base/_typography.scss */
+hr {
+  height: 1px;
+  padding: 0;
+  margin: 9px 0 10px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #dddddd; }
+
+/* line 62, base/_typography.scss */
+blockquote {
+  margin: 1.5em;
+  color: #999999;
+  font: italic 14px / 18px "Georgia", Georgia, serif; }
+
+/* line 67, base/_typography.scss */
+strong {
+  font-weight: bold; }
+
+/* line 70, base/_typography.scss */
+em, dfn {
+  font-style: italic; }
+
+/* line 73, base/_typography.scss */
+dfn {
+  font-weight: bold; }
+
+/* line 76, base/_typography.scss */
+sup, sub {
+  line-height: 0; }
+
+/* line 79, base/_typography.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #333333; }
+
+/* line 82, base/_typography.scss */
+address {
+  margin: 0 0 1.5em;
+  font-style: italic; }
+
+/* line 86, base/_typography.scss */
+del {
+  color: #999999; }
+
+/* line 89, base/_typography.scss */
+pre {
+  margin: 1.5em 0;
+  white-space: pre; }
+
+/* line 93, base/_typography.scss */
+pre, code, tt {
+  font: 1em "andale mono", "lucida console", monospace;
+  line-height: 1.5; }
+
+/* line 97, base/_typography.scss */
+li ul, li ol {
+  margin: 0; }
+
+/* line 100, base/_typography.scss */
+ul, ol {
+  margin: 0 1.5em 1.5em 0;
+  padding-left: 3.333em; }
+
+/* line 104, base/_typography.scss */
+ul {
+  list-style-type: disc; }
+
+/* line 107, base/_typography.scss */
+ol {
+  list-style-type: decimal; }
+
+/* line 110, base/_typography.scss */
+dl {
+  margin: 0 0 1.5em 0; }
+
+/* line 113, base/_typography.scss */
+dl dt {
+  font-weight: bold; }
+
+/* line 116, base/_typography.scss */
+dd {
+  margin-left: 1.5em; }
+
+/* line 121, base/_typography.scss */
+table {
+  margin-bottom: 1.4em;
+  width: 100%; }
+
+/* line 125, base/_typography.scss */
+th {
+  font-weight: bold; }
+
+/* line 128, base/_typography.scss */
+th, td {
+  padding: 4px 10px 4px 5px; }
+
+/* line 131, base/_typography.scss */
+tfoot {
+  font-style: italic; }
+
+/* line 136, base/_typography.scss */
+label {
+  font-size: 11px;
+  font-weight: normal;
+  color: #333333;
+  line-height: 1;
+  text-transform: uppercase; }
+
+/* line 143, base/_typography.scss */
+input2 {
+  outline: none;
+  border: 1px solid #dddddd;
+  padding: 5px;
+  margin: 0 0 20px;
+  width: 338px;
+  font: 12px / 1.5 "Helvetica", Helvetica, Arial, sans-serif; }
+
+/* line 152, base/_typography.scss */
+textarea {
+  outline: none;
+  border: 1px solid #dddddd;
+  padding: 5px;
+  margin: 0 0 20px;
+  width: 338px;
+  font: 12px / 1.5 "Helvetica", Helvetica, Arial, sans-serif; }
+
+/* line 160, base/_typography.scss */
+input:focus, textarea:focus {
+  border-color: #999999; }
+
+/* line 165, base/_typography.scss */
+::selection {
+  background: #ffd4d8; }
+
+/* line 168, base/_typography.scss */
+::-moz-selection {
+  background: #ffd4d8; }
+
+/* line 3, components/_header.scss *
+.header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 10000;
+  -webkit-box-shadow: rgba(0, 0, 0, 0), 0 0 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0), 0 0 0;
+  box-shadow: rgba(0, 0, 0, 0), 0 0 0;
+  -webkit-transition-property: box-shadow;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  background: #ee0011;
+  height: 30px; }
+
+/* line 11, components/_header.scss *
+.header__container {
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px;
+  min-width: 640px; }
+
+/* line 14, components/_header.scss *
+.header__title {
+  position: relative;
+  height: 30px;
+  z-index: 2; }
+
+/* line 19, components/_header.scss *
+.header__title__link {
+  background: url("../images/datavisualization_home.png") -12px 0 no-repeat;
+  display: block;
+  height: 30px; }
+
+/* line 24, components/_header.scss *
+.header__title__image {
+  margin-left: -12px; }
+
+/* line 27, components/_header.scss *
+.header__subtitle {
+  position: absolute;
+  top: 10px;
+  left: 240px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0;
+  text-transform: uppercase;
+  z-index: 1; }
+
+/* line 38, components/_header.scss *
+.header__title__link:hover .header__title__image {
+  display: none; }
+
+/* line 41, components/_header.scss *
+.header.overlayed .header__title__link:hover .header__title__image {
+  display: block; }
+
+/* line 47, components/_header.scss *
+.search__form {
+  position: absolute;
+  right: 40px;
+  top: 4px;
+  z-index: 3; }
+
+/* line 53, components/_header.scss *
+.search__field {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  font: 12px / 1.4 "Helvetica", Helvetica, Arial, sans-serif;
+  height: 22px;
+  padding: 3px 5px;
+  width: 167px; }
+
+/* line 61, components/_header.scss *
+.search__field::-webkit-search-cancel-button {
+  -webkit-appearance: none; }
+
+/* line 3, components/_navigation.scss */
+.navigation {
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  z-index: 10001;
+  -webkit-box-shadow: rgba(0, 0, 0, 0), 0 0 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0), 0 0 0;
+  box-shadow: rgba(0, 0, 0, 0), 0 0 0;
+  -webkit-transition-property: box-shadow;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  background: #222222;
+  height: 30px; }
+
+/* line 11, components/_navigation.scss */
+.navigation.overlayed {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px; }
+
+/* line 14, components/_navigation.scss */
+.navigation__container {
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px;
+  min-width: 640px; }
+
+/* line 17, components/_navigation.scss */
+.navigation__label {
+  color: #666666;
+  margin: 5px 5px 5px 20px;
+  line-height: 20px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline; }
+
+/* line 23, components/_navigation.scss */
+.navigation__list {
+  overflow: hidden;
+  *zoom: 1;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-left: 0; }
+  /* line 27, components/_navigation.scss */
+  .navigation__list .navigation__item {
+    width: 100px;
+    height: 20px;
+    border-right: none;
+    margin: 5px 5px 5px 0;
+    float: left;
+    text-align: center; }
+    /* line 34, components/_navigation.scss */
+    .navigation__list .navigation__item:first-child {
+      width: 100px;
+      margin-right: 20px; }
+  /* line 39, components/_navigation.scss */
+  .navigation__list .navigation__link {
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #333333));
+    background: -webkit-linear-gradient(#444444, #333333);
+    background: -moz-linear-gradient(#444444, #333333);
+    background: -o-linear-gradient(#444444, #333333);
+    background: linear-gradient(#444444, #333333);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    color: #999999;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+    background: #333;
+    text-transform: none; }
+  /* line 49, components/_navigation.scss */
+  .navigation__list .navigation__link:hover {
+    color: #bbbbbb;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #555555), color-stop(100%, #444444));
+    background: -webkit-linear-gradient(#555555, #444444);
+    background: -moz-linear-gradient(#555555, #444444);
+    background: -o-linear-gradient(#555555, #444444);
+    background: linear-gradient(#555555, #444444); }
+  /* line 53, components/_navigation.scss */
+  .navigation__list .navigation__link.selected {
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #555555));
+    background: -webkit-linear-gradient(#444444, #555555);
+    background: -moz-linear-gradient(#444444, #555555);
+    background: -o-linear-gradient(#444444, #555555);
+    background: linear-gradient(#444444, #555555);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0px 0px inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0px 0px inset;
+    color: #fff;
+    font-weight: bold; }
+  /* line 59, components/_navigation.scss */
+  .navigation__list .navigation__link.selected:hover {
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #555555));
+    background: -webkit-linear-gradient(#444444, #555555);
+    background: -moz-linear-gradient(#444444, #555555);
+    background: -o-linear-gradient(#444444, #555555);
+    background: linear-gradient(#444444, #555555); }
+
+/* line 63, components/_navigation.scss */
+.navigation__column {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline; }
+
+/* line 66, components/_navigation.scss */
+.navigation__column--primary {
+  float: left; }
+
+/* line 69, components/_navigation.scss */
+.navigation__column--secondary {
+  float: right; }
+  /* line 72, components/_navigation.scss */
+  .navigation__column--secondary .navigation__list .navigation__item {
+    width: 40px;
+    margin: 5px 0; }
+    /* line 75, components/_navigation.scss */
+    .navigation__column--secondary .navigation__list .navigation__item:first-child {
+      margin-right: 1px; }
+      /* line 77, components/_navigation.scss */
+      .navigation__column--secondary .navigation__list .navigation__item:first-child .navigation__link {
+        -webkit-border-radius: 10px 0 0 10px;
+        -moz-border-radius: 10px 0 0 10px;
+        -ms-border-radius: 10px 0 0 10px;
+        -o-border-radius: 10px 0 0 10px;
+        border-radius: 10px 0 0 10px; }
+    /* line 81, components/_navigation.scss */
+    .navigation__column--secondary .navigation__list .navigation__item:last-child {
+      margin-right: 0px; }
+      /* line 83, components/_navigation.scss */
+      .navigation__column--secondary .navigation__list .navigation__item:last-child .navigation__link {
+        -webkit-border-radius: 0 10px 10px 0;
+        -moz-border-radius: 0 10px 10px 0;
+        -ms-border-radius: 0 10px 10px 0;
+        -o-border-radius: 0 10px 10px 0;
+        border-radius: 0 10px 10px 0; }
+
+/* line 3, components/_content.scss *
+.content {
+  padding: 60px 0; }
+
+/* line 6, components/_content.scss *
+.content__container {
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px;
+  min-width: 640px;
+  *zoom: 1;
+  padding: 20px 40px 60px; }
+  /* line 38, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .content__container:after {
+    content: "";
+    display: table;
+    clear: both;
+	 
+	}
+
+/* line 1, components/_footer.scss *
+.footer {
+  *zoom: 1;
+  color: #bbbbbb;
+  font-size: 11px; }
+  /* line 38, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 6, components/_footer.scss *
+.footer__container {
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px;
+  min-width: 640px; }
+
+/* line 9, components/_footer.scss *
+.footer__section__heading {
+  border-bottom: 1px solid #dddddd;
+  font-weight: normal;
+  font-size: 11px;
+  margin-bottom: 1px;
+  text-transform: uppercase; }
+
+/* line 16, components/_footer.scss *
+.footer__section--about {
+  padding-right: 40px; }
+  /* line 18, components/_footer.scss *
+  .footer__section--about .lead {
+    margin-top: 5px;
+    background: url("../images/icon_sprite.png") 0 -1144px no-repeat;
+    color: #999999;
+    font: italic 14px / 16px "Georgia", Georgia, serif;
+    text-indent: 12px; }
+    /* line 24, components/_footer.scss *
+    .footer__section--about .lead a {
+      color: #999999;
+      font-weight: normal; }
+      /* line 27, components/_footer.scss *
+      .footer__section--about .lead a:hover {
+        color: #333333; }
+
+/* line 35, components/_footer.scss */
+.share__list {
+  font-size: 11px;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/* line 41, components/_footer.scss */
+.share__list__item {
+  list-style: none;
+  border-bottom: 1px solid #dddddd;
+  padding: 5px 0;
+  height: 20px; }
+
+/* line 47, components/_footer.scss */
+.share__list__item__link {
+  display: block;
+  height: 18px;
+  padding: 4px 0 0 0; }
+
+/* line 3, components/_deck.scss */
+.cards {
+  *zoom: 1; }
+  /* line 38, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .cards:after {
+    content: "";
+    display: table;
+    clear: both; }
+	/* flip the pane when hovered *
+	.cards:hover .card, .cards.hover .card {
+		transform: rotateY(180deg);
+	}*/
+	
+/* line 8, components/_deck.scss */
+.card {
+  height: 280px;
+  margin: 0 10px 20px 10px;
+  position: relative;
+  width: 225px;
+  cursor: pointer;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px; }
+  /* line 15, components/_deck.scss */
+  .card h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px 10px 10px; }
+  /* line 20, components/_deck.scss */
+  .card h4 {
+    margin: 20px 10px 0px;
+    font-size: 12px;
+    text-transform: uppercase; }
+  /* line 25, components/_deck.scss */
+  .card strong {
+    font-size: 12px;
+    text-transform: uppercase; }
+  /* line 29, components/_deck.scss */
+  .card p {
+    margin: 0 10px 10px; }
+  /* line 32, components/_deck.scss */
+  .card a {
+    color: #999999;
+    font-weight: normal;
+    background: transparent url("/img/link_icon.png") 0 -38px no-repeat;
+    padding-left: 15px; }
+    /* line 37, components/_deck.scss */
+    .card a:hover {
+      color: #ee0011;
+      background-position: 0 -58px; }
+  /* line 42, components/_deck.scss */
+  .card ul {
+    margin: 3px 10px 10px;
+    padding: 0 0 0 2px;
+    list-style: none;
+    color: #999999; }
+    /* line 47, components/_deck.scss */
+    .card ul li a {
+      font-weight: normal; }
+  /* line 51, components/_deck.scss */
+  .card img {
+    margin: 0; }
+  /* line 55, components/_deck.scss */
+  .card .card__front1,
+  .card .card__back1 {
+    float: none;
+    position: absolute;
+    top: 5;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border: 1px solid #dddddd;
+    padding: 1px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.5s, 0.2s;
+    -moz-transition-duration: 0.5s, 0.2s;
+    -o-transition-duration: 0.5s, 0.2s;
+    transition-duration: 0.5s, 0.2s;
+    -webkit-transition-property: -webkit-transform, box-shadow;
+    -moz-transition-property: -moz-transform, box-shadow;
+    -o-transition-property: -o-transform, box-shadow;
+    transition-property: transform box-shadow; }
+  /* line 70, components/_deck.scss */
+  .card .card__front1 {
+    z-index: 900;
+    background: #aaaaaa;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+    /* line 74, components/_deck.scss */
+    .card .card__front1 a {
+      visibility: hidden; }
+  /* line 78, components/_deck.scss */
+  .card.flip .card__front1 {
+    z-index: 900;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  
+  /* line 82, components/_deck.scss */
+  .card .card__back1 {
+    z-index: 800;
+    border-color: #cccccc;
+    background: #ee0011;
+    border-color: #d4000f;
+    color: #fff;
+     transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    }
+    /* line 88, components/_deck.scss */
+    .card .card__back1 a {
+      background-position: 0 2px;
+      color: rgba(255, 255, 255, 0.75); }
+      /* line 91, components/_deck.scss */
+      .card .card__back1 a:hover {
+        color: white;
+        background-position: 0 -18px; }
+ 
+  /* line 98, components/_deck.scss */
+  .card.flip .card__back1 {
+    z-index: 1000;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);    
+    -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5); }
+
+  /* line 105, components/_deck.scss */
+  .card .card__front1:hover {
+    border-color: #cccccc;
+    -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3); }
+    /* line 110, components/_deck.scss */
+    .card .card__front1:hover a {
+      visibility: visible; }
+  /* line 115, components/_deck.scss */
+  .card .flip_back,
+  .card .flip_front1 {
+    visibility: hidden;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px; }
+  /* line 123, components/_deck.scss */
+  .card .flip_front {
+    /*background: transparent url("./img/flip_icon.png") 0 0 no-repeat;*/ }
+  /* line 126, components/_deck.scss */
+  .card .flip_back {
+  /*  background: transparent url("./img/flip_icon.png") 0 -30px no-repeat;*/ }
+  /* line 129, components/_deck.scss */
+  .card:hover {
+    z-index: 1000; }
+    /* line 131, components/_deck.scss */
+    .card:hover .flip_back, .card:hover .flip_front {
+      visibility: visible; }
+
+/* line 139, components/_deck.scss */
+.isotope-item {
+  z-index: 2; }
+
+/* line 142, components/_deck.scss */
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+/* line 147, components/_deck.scss */
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s; }
+
+/* line 150, components/_deck.scss */
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height width; }
+
+/* line 153, components/_deck.scss */
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform opacity; }
+
+/* line 158, components/_deck.scss */
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s; }
+
+/* line 164, components/_deck.scss */
+.popularity_chart {
+  margin: 10px;
+  padding: 0 0 0 20px; }
+
+/* line 168, components/_deck.scss */
+.popularity_track {
+  background: rgba(0, 0, 0, 0.1);
+  display: block;
+  height: 10px; }
+
+/* line 173, components/_deck.scss */
+.popularity_bar {
+  background: rgba(0, 0, 0, 0.1);
+  display: block;
+  height: 10px;
+  width: 50%; }
+
+/* line 179, components/_deck.scss */
+.github_watchers {
+  background: transparent url("./images/watch_icon.png") 0 4px no-repeat;
+  padding: 0 0 0 18px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin: 0 0 0 2px; }
+
+/* line 185, components/_deck.scss */
+a:hover .github_watchers {
+  background: transparent url("./images/watch_icon.png") 0 -16px no-repeat; }
+
+/* line 3, components/_tooltip.scss */
+.ui-tooltip-datavis {
+  border: 0; }
+
+/* line 7, components/_tooltip.scss */
+.ui-tooltip-datavis .ui-tooltip-titlebar,
+.ui-tooltip-datavis .ui-tooltip-content {
+  _margin-bottom: 0;
+  /* IE6 */
+  .margin-bottom: 0;
+  /* IE7 */
+  background: transparent;
+  background: rgba(0, 0, 0, 0.87);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#D9000000,endColorstr=#D9000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#D9000000,endColorstr=#D9000000)";
+  color: white;
+  border: 0px transparent;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 16px;
+  text-shadow: 0 1px black;
+  max-width: 120px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+/* line 27, components/_tooltip.scss */
+.ui-tooltip-datavis .ui-tooltip-titlebar {
+  padding: 6px 35px 0 10; }
+
+/* line 31, components/_tooltip.scss */
+.ui-tooltip-datavis .ui-tooltip-content {
+  padding: 6px 10;
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3); }
+
+/* line 36, components/_tooltip.scss */
+.ui-tooltip-datavis .ui-tooltip-icon {
+  border-color: #222;
+  text-shadow: none; }
+
+/* line 41, components/_tooltip.scss */
+.ui-tooltip-datavis .ui-tooltip-titlebar .ui-state-hover {
+  border-color: #303030; }
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+	margin: 0 10px 20px 10px;
+    position: relative;
+	cursor: pointer;
+}
+	/* flip the pane when hovered */
+	.flip-container:active .flipper, .flip-container.active .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .card__front, .card__back {
+	width: 230px;
+	height: 250px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 1.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.card__front, .card__back {
+	backface-visibility: hidden;
+    box-shadow: 10px 10px 5px #888888;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.card__front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.card__back {
+	transform: rotateY(180deg);
+}
+
+.flipper .card__front,
+  .flipper .card__back {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border: 1px solid #dddddd;
+    padding: 1px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.5s, 0.2s;
+    -moz-transition-duration: 0.5s, 0.2s;
+    -o-transition-duration: 0.5s, 0.2s;
+    transition-duration: 0.5s, 0.2s;
+    -webkit-transition-property: -webkit-transform, box-shadow;
+    -moz-transition-property: -moz-transform, box-shadow;
+    -o-transition-property: -o-transform, box-shadow;
+    transition-property: transform box-shadow; }
+  /* line 70, components/_deck.scss */
+  .flipper .card__front {
+    z-index: 900;
+    background: #aaaaaa;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+    /* line 74, components/_deck.scss */
+    .flipper .card__front a {
+      visibility: hidden; }
+  /* line 78, components/_deck.scss */
+  .flipper.flip .card__front {
+    z-index: 900;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  /* line 82, components/_deck.scss */
+  .flipper .card__back {
+    z-index: 800;
+    border-color: #cccccc;
+    background: #ee0011;
+    border-color: #d4000f;
+    color: #fff;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg); }
+    /* line 88, components/_deck.scss */
+    .flipper .card__back a {
+      background-position: 0 2px;
+      color: rgba(255, 255, 255, 0.75); }
+      /* line 91, components/_deck.scss */
+      .flipper .card__back a:hover {
+        color: white;
+        background-position: 0 -18px; }
+  /* line 98, components/_deck.scss */
+  .flipper.flip .card__back {
+   z-index: 1000;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+   }
+  /* line 105, components/_deck.scss */
+  .flipper .card__front:hover {
+    border-color: #cccccc;
+    -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3); }
+    /* line 110, components/_deck.scss */
+    .flipper .card__front:hover a {
+      visibility: visible; }
+  /* line 115, components/_deck.scss */
+  .flipper .flip_back,
+  .flipper .flip_front {
+    visibility: hidden;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px; }
+  /* line 123, components/_deck.scss */
+  .flipper .flip_front {
+ /*   background: transparent url("/img/liz.png") 0 0 no-repeat;*/ }
+  /* line 126, components/_deck.scss */
+  .flipper .flip_back {
+ /*   background: transparent url("/img/liz.png") 0 -30px no-repeat;*/ }
+  /* line 129, components/_deck.scss */
+  .flipper:hover {
+    z-index: 1000; }
+    /* line 131, components/_deck.scss */
+    .flipper:hover .flip_back, .flipper:hover .flip_front {
+      visibility: visible; }

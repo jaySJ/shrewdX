@@ -1,0 +1,50 @@
+<!-- views/profile.htm -->
+<!--div class="container"-->
+	<!--div class="page-header text-center">
+		<!--h1><span class="fa fa-anchor"></span> Profile Page</h1->
+		<!--a href="/logout" class="btn btn-default btn-sm">Logout</a->
+	</div-->
+	<!--div class="row"-->
+		<!-- LOCAL INFORMATION -->
+		<div class="col">
+			<div class="well">
+				<h3><span class="fa fa-user"></span> Update Profile</h3>				
+					<p>
+						{{ message }}
+						<div class="input-group margin-bottom-sm">
+							<span class="input-group-addon "><i class="fa fa-envelope-o fa-fw"></i></span>
+							<input disabled="disabled" ng-model="myProfile.user.local.email"/>
+						</div><br>
+						<div class="input-group ">
+							<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+							<input ng-model="myProfile.user.local.firstname" />
+							<i> First name </i>
+						</div><br>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+							<input ng-model="myProfile.user.local.lastname" />
+							<i> Last name </i>
+						</div><br>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-rocket fa-fw"></i></span>
+							<input ng-model="myProfile.user.local.department" ng-if="IsAdmin() || IsManager() || IsExec()"/>
+						</div><br>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
+							<input ng-model="myProfile.user.local.location" />
+						</div><br>	
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+							<i> {{myProfile.user.local.dateEnrolled | date:'MM/dd/yyyy' }}</i>
+						</div><br>							
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-users fa-fw"></i></span>
+							<input disabled="disabled" ng-model="myProfile.user.local.group" />
+						</div><br>
+					</p>
+					<button type="button" class="btn btn-default" ><a href = "/" style="cursor: pointer; color: #FF4D4D ;" ><i class="fa fa-times fa-2x" ></i></a></button>
+					<button type="button" class="btn btn-default" ng-click = "updateProfile()"><a style="cursor: pointer; color: #5CE65C" ><i class="fa fa-check fa-2x" ></i></a></button>
+				</div>
+		</div>
+	<!--/div>
+</div-->

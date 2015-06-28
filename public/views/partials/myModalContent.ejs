@@ -1,0 +1,80 @@
+
+<!--div class="modal-dialog" ng-controller="usersController">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Add Members</h3>
+        </div>
+        <div class="modal-body">
+          <form name="myForm">
+            <div class="alert alert-danger">{{message}}</div>
+            <div>
+                <select class="form-control btn btn-primary dropdown-toggle" ng-model="formdata_.selectedRole" >
+                    <option ng-repeat="choice in allowedRoles">{{choice}}</option>
+                </select>
+            </div><br>
+            <div class="input-group margin-bottom-sm">
+                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                <input class="form-control" type="text" name="email" ng-model="formData.email" placeholder="Email address"/>
+            </div><br>
+            <div class="input-group" ng-show="formdata_.showDepartment">
+                <span class="input-group-addon">
+                    <i class="fa fa-rocket fa-fw"></i>
+                </span>
+                <input class="form-control" type="text" name="department" ng-model="formData.department" placeholder="Department name"/>
+            </div><br>
+            <div class="input-group" ng-show="formdata_.showDepartment">
+                <span class="input-group-addon">
+                    <i class="fa fa-rocket fa-fw"></i>
+                </span>
+                <input class="form-control" type="text" name="location" ng-model="formData.location" placeholder="Location"/>
+            </div><br>
+          </form>
+        </div>
+        <br>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-warning" ng-click="createMember()">Add Member</button>
+                        <!--button class="btn btn-primary" ng-click="submit()">OK</button->
+            <button type="submit" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</div-->
+   
+
+<div >
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+  </div>
+  <div class="modal-body">
+    ...
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+
+<!--div class="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+  </div>
+  <div class="modal-body">
+    ...
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+</div>
+</div>
+<!--/script-->
+            
+

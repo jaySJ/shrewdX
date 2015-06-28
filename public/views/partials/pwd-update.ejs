@@ -1,0 +1,28 @@
+<!-- views/profile.htm -->
+<!--div class="container"-->
+	<!--div class="page-header text-center">
+		<!--h1><span class="fa fa-anchor"></span> Profile Page</h1->
+		<!--a href="/logout" class="btn btn-default btn-sm">Logout</a->
+	</div-->
+	<!--div class="row"-->
+		<!-- LOCAL INFORMATION -->
+		<div class="col">
+			<div class="well">
+				<h3><span class="fa fa-user"></span>Password Change</h3>				
+					<p>
+						{{ message }} 
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+							<input type="password" name="password" ng-model="pwd" placeholder="Enter new password" />
+						</div><br>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+							<input type="password" name="password" ng-model="pwd2" placeholder="Re-enter new password" />
+						</div><br>
+					</p>
+					<button type="button" class="btn btn-default" ><a href = "/" style="cursor: pointer; color: #FF4D4D ;" ><i class="fa fa-times fa-2x" ></i></a></button>
+					<button type="button" class="btn btn-default" ng-click = "updateProfilePwd()"><a style="cursor: pointer; color: #5CE65C" ><i class="fa fa-check fa-2x" ></i></a></button>
+				</div>
+		</div>
+	<!--/div>
+</div-->

@@ -1,0 +1,74 @@
+<!-- views/signup.htm -->
+<!doctype html>
+<html>
+<head>
+	<title>Shrewd Galileo</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<style>
+		body 		{ padding-top:80px; background-image:url('/img/shrewd_galileo.png'); background-color:#ffffff; background-repeat:no-repeat; background-position:center top; }
+		.well { height: auto; background-color: rgb(203, 225, 171); opacity:0.95; }	
+	</style>
+
+</head>
+<body>
+<div class="col-sm-6 col-sm-offset-3 well">
+	<img src ="/img/shrewd_logo80x100.png" align="right"></img>
+	<h1><span class="fa fa-sign-in"></span> Signup</h1>
+	<!-- show any messages that come back with authentication -->
+	<% if (message.length > 0) { %>
+		<div class="alert alert-danger"><%= message %></div>
+	<% } %>
+	<!-- SIGNUP FORM -->
+	<form action="/signup" method="post">
+		<div class="input-group margin-bottom-sm">
+			<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+			<input class="form-control" type="text" name="email" placeholder="Email address"/>
+		</div> <br>
+		<div class="input-group margin-bottom-sm">
+			<span class="input-group-addon"><i class="fa  fa-user fa-fw"></i></span>
+			<input class="form-control" type="text" name="firstname" placeholder="First name"/>
+		</div> <br>
+		<div class="input-group margin-bottom-sm">
+			<span class="input-group-addon"><i class="fa  fa-user fa-fw"></i></span>
+			<input class="form-control" type="text" name="lastname" placeholder="Last name"/>
+		</div> <br>
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="fa fa-key fa-fw"> </i></span>			
+			<input class="form-control" type="password" name="password" placeholder="password"/>			
+		</div><br>
+		<div class="input-group">
+			<span class="input-group-addon">				
+				<i class="fa fa-rocket fa-fw" style="color:red;"></i>
+			</span>
+			<input class="form-control" type="text" name="alias" placeholder="company alias"/>
+		</div><br>
+		<div class="input-group">
+			<span class="input-group-addon">				
+				<i class="fa fa-users fa-fw"></i>
+			</span>
+			<input class="form-control" type="password" name="user_group" placeholder="group"/>
+		</div><br>
+		<div class="input-group">
+			<span class="input-group-addon">
+				<i class="fa fa-rocket fa-fw"></i>
+			</span>
+			<input class="form-control" type="text" name="department" placeholder="department"/>
+		</div><br>
+		<div class="input-group">
+			<span class="input-group-addon">
+				<i class="fa fa-map-marker fa-fw"></i>
+			</span>
+			<input class="form-control" type="text" name="location" placeholder="location"/>
+		</div><br>
+		<button type="submit" class="btn btn-warning btn-lg">Signup</button>
+	</form>
+	<hr>
+	<p>Already have an account? <a href="/login">Login</a></p>
+	<p>Or go <a href="/">home</a>.</p>
+</div>
+
+</body>
+</html>
+

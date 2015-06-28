@@ -1,0 +1,47 @@
+<!-- views/profile.htm -->
+<!--div class="container"-->
+	<!--div class="page-header text-center">
+		<!--h1><span class="fa fa-anchor"></span> Profile Page</h1->
+		<!--a href="/logout" class="btn btn-default btn-sm">Logout</a->
+	</div-->
+	<!--div class="row"-->
+		<!-- LOCAL INFORMATION -->
+		<div class="col">
+			<div class="well" ng-controller="orgController" >
+				<h3><span class="fa fa-user"></span> Sample Size Calculator</h3>				
+					<p>
+						{{ message }}
+						<div class="input-group ">
+							<span class="input-group-addon"><i class="fa fa-group fa-fw"></i></span>
+							<input ng-model="myOrgProfile.orgprofile.company_strength" />
+							<i>[# Employees]</i>
+						</div><br>
+						<img src="/../../img/NormalDistribution2.png"/>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-thumbs-up fa-fw"></i></span>
+							<div myslider> </div> [Confidence Level = {{percent}}%]
+							<input ng-show="false" type="text" id="percent" ng-model="myOrgProfile.orgprofile.desired_confidence" style="font-weight:bold;">   </input>
+							<br>
+						</div><br>						
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-thumbs-o-up fa-fw"></i></span>
+							<div mysliderpercent> </div> [Likely Survey Response Rate = {{responserate}}% ]
+							<input ng-show="false" type="text" id="responserate" ng-model="myOrgProfile.orgprofile.likely_response_rate" style="font-weight:bold;">   </input>
+							<br>
+						</div><br>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-thumbs-o-up fa-fw"></i></span>
+							<input disabled ="disabled" type="text" id="confInterval" ng-model="confInterval"></input>
+							<i>[%] Confidence Interval (+/-)  </i>
+						</div><br>
+					<b>	Required Sample Size is {{ sampleSize/ (1.0+((sampleSize-1.0)/myOrgProfile.orgprofile.company_strength)) | number:0}} <p>  
+						We recommend sending survey to {{ (sampleSize/ (1.0+((sampleSize-1.0)/myOrgProfile.orgprofile.company_strength))*100.00/responserate) | number:0 }} participants!
+					</b>	
+					<br>
+					</p>
+					<button type="button" class="btn btn-default" ><a href = "/" style="cursor: pointer; color: #FF4D4D ;" ><i class="fa fa-times fa-2x" ></i></a></button>
+					<button type="button" class="btn btn-default" ng-click = "updateOrgProfile()"><a style="cursor: pointer; color: #5CE65C" ><i class="fa fa-check fa-2x" ></i></a></button>
+			</div>
+		</div>
+	<!--/div-->
+<!--/div-->

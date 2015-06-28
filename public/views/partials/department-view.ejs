@@ -1,0 +1,36 @@
+<!-- views/profile.htm -->
+  <style type="text/css">
+    .google-map{width:auto; height:500px;}
+  </style>  
+<!--div class="container" ng-app="ShrewdApp">
+	<!--div class="page-header text-center">
+		<!--h1><span class="fa fa-anchor"></span> {{message}}</h1->
+		<!--a href="/logout" class="btn btn-default btn-sm">Logout</a->
+	</div-->
+	<!--div class="row"-->
+		<!-- LOCAL INFORMATION -->
+		<!--div class="google-map" google-maps="" latitude="45.074688" longitude="-93.384294"></div-->
+		<h2> Department Names </h2>
+		<div class="col">
+			<div class="well" >				
+				<table class="table" >
+					<thead>
+						<tr>
+							<th>Department Names</th>
+							<th>Location</th>
+							<th>#employees enrolled</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in filtered = (deparmentsList | filter: query)">
+						We found {{members.length}} users in {{filtered.length}} unique departments in your organization.
+						<td>{{row._id.department}}</td>
+						<td>{{row._id.location}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	<!--/div-->
+<!--/div-->
+

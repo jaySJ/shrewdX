@@ -1,0 +1,84 @@
+ul.greenleaf {
+		list-style-color: #fff;
+		list-style-image: url('/img/leaf_green.png');
+	}
+	ul.greyleaf {
+		list-style-color: #f90;
+		list-style-image: url('/img/leaf_maroon.png');
+	}
+	.minimalList {
+		min-height: 100px;
+	}
+	%content {
+	  font-size: 12px;
+	  text-align: center;
+	  margin: 0 5px;
+	}
+	.column-left{ float: bottom; }
+	.column-right{ float: top; }
+	.bin {
+	  @extend %content;
+	  min-height: 80px;
+	  min-width: 250px;
+	  float: left;
+	  border: 1px solid grey;
+	  padding: 10px;
+	  background: #1abc9c;
+	  color: Black;
+	  text-align: center;
+	  font-size: 20px;
+	  text-shadow: 0.01em 0.01em 0.05em #333;
+	  border-radius: 5px;
+	  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+	  /*background-image: url('/img/leaf_green.png');*/
+	
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	}
+	.item {
+	  @extend %content;
+	  min-height: 50px;
+	  min-width: 25px;
+	  max-width: 250px;
+	  background: #34495e;
+	  padding: 20px;
+	  float: center;
+	  transition: all 2.0s ease;
+	/*  border: 2px solid lightgrey;*/
+	  border-radius: 10px;
+	  font-size: 14px;
+	  color: white;
+	  text-shadow: 0.01em 0.01em 0.05em #000;
+	  clear: both;
+      margin-bottom: 4px;
+	 /* background-image: url('/img/leaf_maroon.png');*/
+	
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+	cursor:move; 
+	}
+	
+  .item.slideright:hover {
+    -webkit-transform: translate(1em,0) scale(1.1);
+    -moz-transform: translate(1em,0)  scale(1.1);
+    -o-transform: translate(1em,0) scale(1.1);
+    -ms-transform: translate(1em,0) scale(1.1);
+    transform: translate(1em,0) scale(1.1);
+	color: #FF9933;
+  }
+
+	.drag {
+	  opacity: 0.2;
+	}
+	.over {
+		background: white;
+	   -webkit-transform: translate(1em,0) scale(1.4);
+    -moz-transform: translate(1em,0)  scale(1.4);
+    -o-transform: translate(1em,0) scale(1.4);
+    -ms-transform: translate(1em,0) scale(1.4);
+    transform: translate(1em,0) scale(1.4);
+	}

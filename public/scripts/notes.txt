@@ -1,0 +1,5 @@
+By default, Express publishes all files in the 'public' folder.
+
+The current folder (\public\scripts\) contains scrpts.  
+
+The file appModule.js will contain the Angular module for the app, defining the routes and templates to user for the user interface.

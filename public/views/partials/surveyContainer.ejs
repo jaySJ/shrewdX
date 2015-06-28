@@ -1,0 +1,34 @@
+<!-- views/profile.htm -->
+<!-- load all the scripts -->
+<link rel="stylesheet" href="/css/survey.css"/> 
+<div ng-controller="surveyController" >
+	<style> 
+	.well {
+		overflow:hidden;
+	}
+	</style>
+	<!-- LOCAL INFORMATION -->
+	<div class="col">
+		<div class="well" class="container" id="main"  >
+			<h3><span class="fa fa-user"> </span> Department Interaction Survey </h3>
+			<div class="row">
+				<div class="alert alert-warning">{{ message }} </div>
+				<div class="well column-right">
+					<div class="bin" droppable ng-repeat="bin in ['<< Never >> ', '<< Daily >>', '<< Weekly >>' , '<< Monthly >>']" bin="bin" id="bin{{ bin }}">{{ bin }}</div>
+				</div>
+				<div class="well column-left">
+					<div class="item slideright" ng-bind-html-unsafe='q.category' id="item{{ item.id }}" ng-repeat="item in items" draggable item="item"> 
+						<!--svg width="30" height="20">
+						<polygon points="10.0,1.0 4.0,19.8 19.0,7.8 1.0,7.8 16.0,19.8"
+						style="fill:yellow;stroke:white;stroke-width:1;fill-rule:evenodd;" />
+						</svg-->
+						{{ item.value }}
+					</div>
+				</div>
+				<br>
+			</div>
+			<button type="button" class="btn btn-default" ><a href = "http://www.hotmail.com" style="cursor: pointer; color: #FF4D4D ;" ><i class="fa fa-times fa-2x" ></i></a></button>
+			<button type="button" class="btn btn-default" ng-click = "respondSurvey1()"><a style="cursor: pointer; color: #5CE65C" ><i class="fa fa-check fa-2x" ></i></a></button>
+		</div>
+	</div>
+</div>
