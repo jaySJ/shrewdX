@@ -315,6 +315,9 @@ module.exports = function(app, passport) {
 	app.get('/user/:id/resetpassword', loadUser, andRestrictToSelfOr('admin'), function(req, res){
 		res.send('Only viewable for admin and the user himself'); 
 	});
+    app.get('*', function (req, res) {
+    res.sendFile('/public/index.html');
+    });
 };
 
 exports.partials = function(req, res){
