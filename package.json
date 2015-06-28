@@ -1,9 +1,16 @@
 {
   "name": "shrewd-application",
   "description": "Shrewd Galileo",
-  "main": "index.html",
+  "main": "app.js",
   "version": "0.0.1",
   "private": true,
+    "scripts": {
+    "start": "node app.js",
+    "test": "mocha --reporter spec test"
+  },
+  "devDependencies": {
+    "mocha": "^1.17.1"
+  },
   "dependencies": {
     "bcrypt-nodejs": "latest",
     "bson": "^0.2.20",
